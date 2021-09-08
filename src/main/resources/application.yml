@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/mobang
+    username: mobang
+    password: mobang
+    driver-class-name: org.mysql.jdbc.Driver
