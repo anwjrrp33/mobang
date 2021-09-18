@@ -14,16 +14,13 @@ public class MobangApplication {
 		SpringApplication.run(MobangApplication.class, args);
 	}
 
-	/**************************  M E M O  *************************
-	 *  2021-09018 QueryDSL 적용하였으므로 하기 내용 실행 요함         *
-	 *  1. gradle refresh 실행                                    *
-	 *  2. gradle > build > clean 실행                            *
-	 *  3. build.gradle에서 compileQuerydsl 실행                   *
-	 *                                                           *
-	 *  빌드 에러발생시 Settings > Build, Execution, Deployment >   *
-	 *      Build Tools > Gradle 탭에서                           *
-	 *      Build and run using, Run test using 항목을            *
-	 *      Gradle에서 Intellij IDEA로 변경                        *
-	 *************************************************************/
+	/**************************  M E M O  ******************
+	 *  2021-09018 QueryDSL 적용하였으므로 하기 내용 실행 요함  *
+	 *  1. gradle refresh 실행                              *
+	 *  2. gradle > build > clean 실행                      *
+	 *  3. gradle > querydsl > cleanQuerydslSource 실행     *
+	 *  4. gradle > querydsl > initQuerydslSource 실행      *
+	 *  5. gradle > build > build 실행                      *
+	 *******************************************************/
 
 }
