@@ -6,7 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-//@Component
+// @Component
 @RequiredArgsConstructor
 public class TestData implements CommandLineRunner {
 
@@ -18,6 +18,8 @@ public class TestData implements CommandLineRunner {
             RealEstate realEstate = new RealEstate()
                     .builder()
                     .address("서울시 강서구 가양동 " + i + "번지")
+                    .area(Long.valueOf(i))
+                    .salePrice(Long.valueOf(i * 100000000))
                     .build();
 
             realEstateRepository.save(realEstate);
