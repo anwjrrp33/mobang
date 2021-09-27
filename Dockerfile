@@ -37,8 +37,9 @@ RUN ./gradlew initQuerydslSourcesDir
 RUN ./gradlew querydslClasses
 RUN ./gradlew bootJar
 
-FROM openjdk:11
-COPY --from=builder ./build/libs/*.jar app.jar
+FROM openjdk:11-jre-slim
+ARG JAR_FILE=./build/libs/*.jar
+COPY --from=builder ${JAR_FILE} app.jar
 
 EXPOSE 8000
 ENTRYPOINT ["java", "-jar", "/app.jar"]

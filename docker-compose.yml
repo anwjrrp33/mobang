@@ -1,0 +1,25 @@
+version: '3.0'
+services:
+  mysql-db:
+    container_name: mysql-db
+    image: mysql
+    volumes:
+      - /var/lib/mysql:/var/lib/mysql
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=0000
+      - TZ=Asiz/Seoul
+    restart: always
+
+  spring-docker:
+    container_name: spring-docker
+    build:
+      context: . # docker build 명령을 실행할 경로
+      dockerfile: /mnt/c/study/mobang/Dockerfile # 본인 Dockerfile 경로
+    ports:
+      - 8000:8000
+    links:
+      - mysql-db:mysql-db
+    depends_on:
+      - mysql-db
