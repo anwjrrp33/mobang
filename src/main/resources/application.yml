@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://db:3306/mobang?autoReconnection=true
+    url: jdbc:mysql://mysql-db:3306/mobang?autoReconnection=true
     username: mobang
-    password: mobang1234~!
+    password: mobang
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
