@@ -27,4 +27,10 @@ public class RealEstateServiceImpl implements RealEstateService{
         List<RealEstate> result = repository.findAll();
         return result;
     }
+
+    @Override
+    public RealEstate getDetail(Long id) {
+        RealEstate result = repository.findById(id).orElseGet(null);
+        return result;
+    }
 }

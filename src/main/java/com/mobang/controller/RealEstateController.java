@@ -3,6 +3,7 @@ package com.mobang.controller;
 import com.mobang.entity.RealEstate;
 import com.mobang.service.RealEstateService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -39,5 +40,16 @@ public class RealEstateController {
         header.add("Content-Type", "application/json; charset=UTF-8");
 
         return new ResponseEntity<>(service.getList(), header, HttpStatus.OK);
+    }
+
+    @GetMapping("/detail")
+    public ResponseEntity<RealEstate> detail(@Param("id") Long id) {
+        // msg = {"name" : "홍길동"}
+        // String msg = service.getList().toString();
+
+        HttpHeaders header = new HttpHeaders();
+        header.add("Content-Type", "application/json; charset=UTF-8");
+
+        return new ResponseEntity<>(service.getDetail(id), header, HttpStatus.OK);
     }
 }

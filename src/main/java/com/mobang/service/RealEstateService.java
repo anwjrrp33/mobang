@@ -8,4 +8,5 @@ public interface RealEstateService {
 
     Long resigter(RealEstate realEstate);
     List<RealEstate> getList();
+    RealEstate getDetail(Long id);
 }
