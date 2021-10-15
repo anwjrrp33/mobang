@@ -9,4 +9,4 @@
 
 ### Step 4. docker-compose로 서비스 빌드 및 실행
 
-### Step 5. docker-compose에 nginx, (React)[https://github.com/raccoonjeong/mobang-front]
+### Step 5. docker-compose에 nginx, [React](https://github.com/raccoonjeong/mobang-front)
