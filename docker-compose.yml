@@ -23,3 +23,13 @@ services:
       - mysql-db:mysql-db
     depends_on:
       - mysql-db
+
+  nginx-docker:
+    container_name: nginx-docker
+    build:
+      context: /mnt/c/study/mobang-front/
+      dockerfile: /mnt/c/study/mobang-front/Dockerfile
+    ports:
+      - 80:80
+    links:
+      - spring-docker:spring-docker
